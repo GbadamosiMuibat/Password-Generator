@@ -1,5 +1,7 @@
 import random
 import string
+import pyperclip
+
 
 def generate_password(length, num_letters, num_numbers):
     # Ensure the length is at least 8 characters
@@ -28,6 +30,11 @@ def generate_password(length, num_letters, num_numbers):
     
     # Join the list into a string to form the password
     password = ''.join(password_list)
+    
+    # Copy the password to the clipboard using pyperclip
+    pyperclip.copy(password)
+    
+    
     
     return password
 
